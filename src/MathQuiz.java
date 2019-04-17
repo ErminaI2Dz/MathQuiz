@@ -9,7 +9,7 @@ public class MathQuiz {
 		System.out.println("Vjezbajmo matematiku!!!");
 
 		for (int i = 0; i < 10; i++) {
-			int number1 = (int) (Math.random() * 4 + 1);
+			int number1 = (int) (Math.random() * 6 + 1);
 
 			if (number1 == 1) {
 				QuestionMethods.addTwoNumbers();
@@ -21,12 +21,18 @@ public class MathQuiz {
 				QuestionMethods.multiplyTwoNumbers();
 
 			} else if (number1 == 4) {
+				QuestionMethods.divideTwoNumbers();
+
+			} else if (number1 == 5) {
 				QuestionMethods.squareNumber();
+
+			} else if (number1 == 6) {
+				QuestionMethods.squareRootNumber();
 
 			}
 
 			String odgovor = (i == 9) ? "\nBravo! Uspjesno ste rijesili kviz!" : "Odgovor je tacan! Idemo dalje!";
-			System.out.println(odgovor);
+			System.out.println(odgovor + "\n");
 		}
 		input.close();
 	}
